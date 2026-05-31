@@ -1,0 +1,9 @@
+{% if latest_profile_list %}
+    <ul>
+    {% for profile in latest_profile_list %}
+        <li><a href="/pets/{{profile.id}}/">{{ profile.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay perrhijos ni gathijos disponibles.</p>
+{% endif %}

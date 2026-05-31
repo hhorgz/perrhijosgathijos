@@ -1,0 +1,13 @@
+<h1>{{ pet_profile.name }}</h1>
+<h3>{{ pet_profile.species }}</h3>
+<p>Sexo: {{ pet_profile.sex }}</p>
+<p>Edad: {{ pet_profile.age }}  {{ pet_profile.age_type }}</p>
+<p>Personalidad: {{ pet_profile.personality }}</p>
+<p>{{ pet_profile.resumen }}</p>
+{% if pet_profile.is_adopted %}
+    <p><strong>¡Adoptado!</strong></p>
+{% else %}
+    <p><strong>Disponible para adopción</strong></p>
+{% endif %}
+
+<i>Publicado el {{ pet_profile.pub_date }} por {{ pet_profile.foster_parent }}</i>
